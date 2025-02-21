@@ -10,9 +10,6 @@ class SubtaskBase(BaseModel):
 class SubtaskCreate(SubtaskBase):
     pass
 
-class SubtaskCompletionUpdate(BaseModel): 
-    is_completed: Optional[bool] = None  # Make is_completed Optional for updates
-
 class FullSubtaskUpdate(SubtaskBase):
     pass
 
@@ -32,8 +29,6 @@ class TaskBase(BaseModel):
 class TaskCreate(TaskBase):
     section_id: int
 
-class TaskCompletionUpdate(BaseModel):
-    is_completed: Optional[bool] = None  # Make is_completed Optional for updates
 
 class FullTaskUpdate(TaskBase):
     pass
